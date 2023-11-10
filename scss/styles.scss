@@ -1,6 +1,10 @@
 $main-color: rgb(250, 229, 229);
 $base-font-size: 16px;
 $secondary-color: orange;
+$modal-bg-color: rgba(0, 0, 0, 0.7);
+$modal-content-bg-color: #fefefe;
+$modal-border-color: #888;
+$close-color: #aaa;
 
 body {
     background: $main-color;
@@ -35,11 +39,8 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     background: $secondary-color;
     grid-area: a;
-    &:hover {
-        background: lighten($secondary-color, 30);
-    }
-
-
+    
+    
     &.version-2 {
         background: lightskyblue;
         grid-area: b;
@@ -47,9 +48,46 @@ h1 {
     &.version-3 {
         background: red;
         grid-area: c;
+    
     }
     &.version-4 {
         background: yellowgreen;
         grid-area: d;
+    }
+    &:hover {
+        background: lighten($secondary-color, 30);
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $modal-bg-color;
+}
+
+.modal-content {
+    background-color: $modal-content-bg-color;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid $modal-border-color;
+    width: 80%;
+}
+
+.close {
+    color: $close-color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }
 }
