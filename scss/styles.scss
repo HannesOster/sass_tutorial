@@ -9,5 +9,15 @@ body {
 }
 
 h1 {
-    font-size: $base-font-size +10px;
+    font-size: $base-font-size + 10px;
+}
+
+#color-test {
+    width: 200px;
+    height: 200px;
+    background: $secondary-color;
+
+}
+#color-test:hover {
+   background-color: lighten($secondary-color, 30);
 }
