@@ -16,7 +16,7 @@ h1 {
   gap: 10px;
 }
 
-.first-box, .second-box, .third-box, .fourth-box {
+.first-box {
   width: 100%;
   height: 150px;
   display: flex;
@@ -26,27 +26,21 @@ h1 {
   margin: 10px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.first-box:hover, .second-box:hover, .third-box:hover, .fourth-box:hover {
-  background: #ffdb99;
-}
-
-.first-box {
   background: orange;
   grid-area: a;
 }
-
-.second-box {
+.first-box:hover {
+  background: #ffdb99;
+}
+.first-box.version-2 {
   background: lightskyblue;
   grid-area: b;
 }
-
-.third-box {
+.first-box.version-3 {
   background: red;
   grid-area: c;
 }
-
-.fourth-box {
+.first-box.version-4 {
   background: yellowgreen;
   grid-area: d;
 }/*# sourceMappingURL=styles.css.map */
