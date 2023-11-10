@@ -68,6 +68,9 @@ h1 {
     height: 100%;
     overflow: auto;
     background-color: $modal-bg-color;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .modal-content {
