@@ -1,19 +1,51 @@
 body {
-  background: orange;
+  background: rgb(55, 55, 55);
   font-size: 16px;
-  color: rgb(55, 55, 55);
+  color: orange;
 }
 
 h1 {
   font-size: 26px;
 }
 
-#color-test {
-  width: 200px;
-  height: 200px;
-  background: rgb(55, 55, 55);
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "a a b" "c d d";
+  gap: 10px;
 }
 
-#color-test:hover {
-  background-color: #848484;
+.first-box, .second-box, .third-box, .fourth-box {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+.first-box:hover, .second-box:hover, .third-box:hover, .fourth-box:hover {
+  background: #ffdb99;
+}
+
+.first-box {
+  background: orange;
+  grid-area: a;
+}
+
+.second-box {
+  background: lightskyblue;
+  grid-area: b;
+}
+
+.third-box {
+  background: red;
+  grid-area: c;
+}
+
+.fourth-box {
+  background: yellowgreen;
+  grid-area: d;
 }/*# sourceMappingURL=styles.css.map */

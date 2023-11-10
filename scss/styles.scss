@@ -1,6 +1,6 @@
-$main-color: orange;
-$base-font-size:16px;
-$secondary-color: rgb(55, 55, 55);
+$main-color: rgb(55, 55, 55);
+$base-font-size: 16px;
+$secondary-color: orange;
 
 body {
     background: $main-color;
@@ -12,12 +12,48 @@ h1 {
     font-size: $base-font-size + 10px;
 }
 
-#color-test {
-    width: 200px;
-    height: 200px;
-    background: $secondary-color;
-
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "a a b"
+        "c d d";
+        gap: 10px;
 }
-#color-test:hover {
-   background-color: lighten($secondary-color, 30);
+
+.first-box, .second-box, .third-box, .fourth-box {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    margin: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background: lighten($secondary-color, 30);
+    }
+}
+
+.first-box {
+    background: $secondary-color;
+    grid-area: a;
+}
+
+.second-box {
+    background: lightskyblue;
+    grid-area: b;
+}
+
+.third-box {
+    background: red;
+    grid-area: c;
+}
+
+.fourth-box {
+    background: yellowgreen;
+    grid-area: d;
 }
