@@ -1,48 +1,77 @@
-body {
-  background: rgb(250, 229, 229);
-  font-size: 16px;
-  color: seagreen;
-}
-
-h1 {
-  font-size: 26px;
-}
-
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "a a b" "c d d";
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-.first-box {
+.box {
   width: 100%;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin: 10px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: orange;
-  grid-area: a;
+  cursor: pointer;
 }
-.first-box.version-2 {
-  background: lightskyblue;
-  grid-area: b;
+.box:nth-child(1) {
+  background-color: #ff7e67;
 }
-.first-box.version-3 {
-  background: red;
-  grid-area: c;
+.box:nth-child(2) {
+  background-color: #8e7ae6;
 }
-.first-box.version-4 {
-  background: yellowgreen;
-  grid-area: d;
+.box:nth-child(3) {
+  background-color: #7ee681;
 }
-.first-box:hover {
-  background: #ffdb99;
+.box:nth-child(4) {
+  background-color: #f05a5a;
+}
+.box:nth-child(5) {
+  background-color: #66b3ff;
+}
+.box:nth-child(6) {
+  background-color: #ffb366;
+}
+.box:nth-child(7) {
+  background-color: #c285ff;
+}
+.box:nth-child(8) {
+  background-color: #66ffa6;
+}
+.box:nth-child(9) {
+  background-color: #ff6666;
+}
+.box:nth-child(10) {
+  background-color: #4d94ff;
+}
+.box:nth-child(11) {
+  background-color: #ffdb4d;
+}
+.box:nth-child(12) {
+  background-color: #ff99c2;
+}
+.box:nth-child(13) {
+  background-color: #80bfff;
+}
+.box:nth-child(14) {
+  background-color: #ffcc80;
+}
+.box:nth-child(15) {
+  background-color: #99ff99;
+}
+.box:nth-child(16) {
+  background-color: #ff6666;
+}
+.box:nth-child(17) {
+  background-color: #ffcc00;
+}
+.box:nth-child(18) {
+  background-color: #c2f0c2;
+}
+.box:nth-child(19) {
+  background-color: #ffb3b3;
+}
+.box:nth-child(20) {
+  background-color: #66c2ff;
 }
 
 .modal {
@@ -55,9 +84,6 @@ h1 {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal-content {

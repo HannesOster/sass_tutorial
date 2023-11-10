@@ -1,9 +1,7 @@
-// script.js
-
-var selectedBox;
+let selectedBox;
 
 $(document).ready(function() {
-    $('.first-box').click(function() {
+    $('.box').click(function() {
         selectedBox = $(this);
         $('#myModal').show();
     });
@@ -13,8 +11,16 @@ $(document).ready(function() {
     });
 
     $('#applyColor').click(function() {
-        var color = $('#colorInput').val();
-        selectedBox.css('background-color', color);
-        $('#myModal').hide();
+        var colorInput = $('#colorInput').val();
+        if (/^#?([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/.test(colorInput)) {
+            selectedBox.css('background-color', colorInput);
+            $('#myModal').hide();
+        } else {
+            $('#errorModal').show();
+        }
+    });
+
+    $('#closeErrorModal').click(function() {
+        $('#errorModal').hide();
     });
 });
