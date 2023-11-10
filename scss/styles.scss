@@ -2,7 +2,9 @@ $modal-bg-color: #f5f5f5;
 $modal-content-bg-color: #fefefe;
 $modal-border-color: #888;
 $close-color: #aaa;
-
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
