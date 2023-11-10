@@ -1,7 +1,7 @@
 body {
-  background: rgb(55, 55, 55);
+  background: rgb(250, 229, 229);
   font-size: 16px;
-  color: orange;
+  color: seagreen;
 }
 
 h1 {
@@ -24,7 +24,8 @@ h1 {
   align-items: center;
   border-radius: 10px;
   margin: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .first-box:hover, .second-box:hover, .third-box:hover, .fourth-box:hover {
   background: #ffdb99;
